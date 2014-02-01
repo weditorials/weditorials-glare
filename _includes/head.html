@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %} - {% endif %}{{ site.title }}</title>
+  <meta name="author" content="{{ site.author.name }}">
+
+  {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+  <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
+
+  <link rel="canonical" href="{{ canonical }}">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{{ site.css }}/style.css">
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{{ site.img }}/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ site.img }}/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.img }}/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.img }}/apple-touch-icon-114x114.png">
+
+    <!-- LazyLoad - 2.0.3b
+    ================================================== -->
+    <script type="text/javascript">
+        /* lazyload2.0.3b */
+        LazyLoad=function(doc){function createNode(name,attrs){var attr,node=doc.createElement(name);for(attr in attrs)attrs.hasOwnProperty(attr)&&node.setAttribute(attr,attrs[attr]);return node}function finish(type){var callback,urls,p=pending[type];p&&(callback=p.callback,urls=p.urls,urls.shift(),pollCount=0,urls.length||(callback&&callback.call(p.context,p.obj),pending[type]=null,queue[type].length&&load(type)))}function getEnv(){var ua=navigator.userAgent;env={async:doc.createElement("script").async===!0},(env.webkit=/AppleWebKit\//.test(ua))||(env.ie=/MSIE/.test(ua))||(env.opera=/Opera/.test(ua))||(env.gecko=/Gecko\//.test(ua))||(env.unknown=!0)}function load(type,urls,callback,obj,context){var i,len,node,p,pendingUrls,url,_finish=function(){finish(type)},isCSS="css"===type,nodes=[];if(env||getEnv(),urls)if(urls="string"==typeof urls?[urls]:urls.concat(),isCSS||env.async||env.gecko||env.opera)queue[type].push({urls:urls,callback:callback,obj:obj,context:context});else for(i=0,len=urls.length;len>i;++i)queue[type].push({urls:[urls[i]],callback:i===len-1?callback:null,obj:obj,context:context});if(!pending[type]&&(p=pending[type]=queue[type].shift())){for(head||(head=doc.head||doc.getElementsByTagName("head")[0]),pendingUrls=p.urls,i=0,len=pendingUrls.length;len>i;++i)url=pendingUrls[i],isCSS?node=env.gecko?createNode("style"):createNode("link",{href:url,rel:"stylesheet"}):(node=createNode("script",{src:url}),node.async=!1),node.className="lazyload",node.setAttribute("charset","utf-8"),env.ie&&!isCSS&&10>Browser.Version()?node.onreadystatechange=function(){/loaded|complete/.test(node.readyState)&&(node.onreadystatechange=null,_finish())}:isCSS&&(env.gecko||env.webkit)?env.webkit?(p.urls[i]=node.href,pollWebKit()):(node.innerHTML='@import "'+url+'";',pollGecko(node)):node.onload=node.onerror=_finish,nodes.push(node);for(i=0,len=nodes.length;len>i;++i)head.appendChild(nodes[i])}}function pollGecko(node){var hasRules;try{hasRules=!!node.sheet.cssRules}catch(ex){return pollCount+=1,200>pollCount?setTimeout(function(){pollGecko(node)},50):hasRules&&finish("css"),void 0}finish("css")}function pollWebKit(){var i,css=pending.css;if(css){for(i=styleSheets.length;--i>=0;)if(styleSheets[i].href===css.urls[0]){finish("css");break}pollCount+=1,css&&(200>pollCount?setTimeout(pollWebKit,50):finish("css"))}}var env,head,pending={},pollCount=0,queue={css:[],js:[]},styleSheets=doc.styleSheets,Browser={Version:function(){var version=999;return-1!=navigator.appVersion.indexOf("MSIE")&&(version=parseFloat(navigator.appVersion.split("MSIE")[1])),version}};return{css:function(urls,callback,obj,context){load("css",urls,callback,obj,context)},js:function(urls,callback,obj,context){load("js",urls,callback,obj,context)}}}(this.document);
+    </script>
+
+    <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
+
+</head>

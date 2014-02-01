@@ -1,0 +1,64 @@
+################################
+#                              #
+# Default Configuration        #
+#                              #
+################################
+
+url: http://glare.dev
+
+title: Zinnia &amp; Mustafa | Weditorials Wedding Photography
+subtitle: A Weditorials Photography Creation
+seo:
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  keywords: ["wedding photography", "engagement photography"]
+
+assets: http://glare.dev/assets
+css:    http://glare.dev/assets/css
+js:     http://glare.dev/assets/js
+img:    http://glare.dev/assets/img
+
+markdown: rdiscount
+
+# where to read the files from
+source:      ./
+# where to put rendered site source
+destination: ./_site
+# where the layouts can the found
+layouts:     ./_layouts
+includes:     ./_includes
+timezone:     Pacific/Auckland
+
+future:      true
+show_drafts: false
+
+################################
+#                              #
+# Author Configuration         #
+#                              #
+################################
+author:
+  name:    Sergei Filippov
+  email:   s@haiku.co.nz
+  github:  sergeifilippov
+  twitter: sergeifilippov
+  company:
+    name:   Haiku Lab Limited
+    url:    http://haiku.co.nz
+    github: haikulab
+
+################################
+#                              #
+# Google Analytics             #
+#                              #
+################################
+google_analytics_tracking_id:
+
+################################
+#                              #
+# Social                       #
+#                              #
+################################
+facebook:
+twitter:
+pinterest:
+disqus_short_name:
