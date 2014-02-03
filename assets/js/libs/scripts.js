@@ -10,14 +10,14 @@ jQuery.fn.center = function(pos) {
 
 jQuery(function($){
     //Submenu
-    $('.nav').superfish({
-        animation: {
-            opacity: 'show',
-            height: 'show'
-        },
-        speed: 'fast',
-        delay: 500
-    });
+    // $('.nav').superfish({
+    //     animation: {
+    //         opacity: 'show',
+    //         height: 'show'
+    //     },
+    //     speed: 'fast',
+    //     delay: 500
+    // });
 
     //Hide Slider
     $('#hide-slider').click(function(){

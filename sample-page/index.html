@@ -23,6 +23,9 @@ photos:
 ---
 
     {% for photo in page.photos %}
+
+
+
       <article class="four columns set">
           <img src="{{baseurl}}{{ site.assets }}/wedding/sample/{{ photo }}" alt="" class="scale-with-grid" />
           <a href="{{baseurl}}{{ site.assets }}/wedding/sample/large_{{ photo }}">Image</a>
@@ -31,6 +34,8 @@ photos:
               <a href="#" class="view-article">View article</a>
           </div>
       </article><!-- /set -->
+
+
     {% endfor %}
 
 <!-- end class = omega -->
