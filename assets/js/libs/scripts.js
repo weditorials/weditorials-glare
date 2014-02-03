@@ -6,7 +6,7 @@ jQuery.fn.center = function(pos) {
         'left': ((($(parent).width() - this.width()) / 2))
     });
     return this;
-}
+};
 
 jQuery(function($){
     //Submenu
@@ -143,7 +143,7 @@ function initialize() {
           center: myLatlng,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
           draggable: false
-        }
+        };
 
         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
