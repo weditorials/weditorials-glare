@@ -7,31 +7,27 @@
 {% include footer.google_plus_one.html %}
 {% include footer.twitter_sharing.html %}
 
-  <b id="t" class="brd"></b>
-  <b id="l" class="brd"></b>
-  <b id="r" class="brd"></b>
-  <b id="b" class="brd"></b>
-
     <!-- JS resources
     ================================================== -->
-
     <script>
         LazyLoad.js([
-            '{{ site.js }}/libs/modernizr.js',
-            '{{ site.js }}/libs/jquery.1.6.1.min.js',
-            '{{ site.js }}/libs/jquery.easing.min.js',
-            '{{ site.js }}/libs/superfish.js',
-            '{{ site.js }}/libs/supersized.3.2.7.min.js',
-            '{{ site.js }}/libs/supersized.shutter.js',
-            '{{ site.js }}/libs/scripts.js',
-            '{{ site.js }}/libs/jquery.prettyPhoto.js',
-            '{{ site.js }}/libs/jquery.mosaicflow.min.js'
+            '{{baseurl}}{{ site.js }}/libs/modernizr.js',
+            '{{baseurl}}{{ site.js }}/libs/jquery.1.6.1.min.js',
+            '{{baseurl}}{{ site.js }}/libs/jquery.easing.min.js',
+            '{{baseurl}}{{ site.js }}/libs/superfish.js',
+            '{{baseurl}}{{ site.js }}/libs/supersized.3.2.7.min.js',
+            '{{baseurl}}{{ site.js }}/libs/supersized.shutter.js',
+            '{{baseurl}}{{ site.js }}/libs/scripts.js',
+            '{{baseurl}}{{ site.js }}/libs/jquery.prettyPhoto.js',
+            '{{baseurl}}{{ site.js }}/libs/jquery.mosaicflow.min.js'
         ], function () {
           console.log('all files have been loaded');
           $().ready(function($) {
 
+            {% comment %}
+            Homepage actions {% endcomment %}
 
-
+              {% if page.homeslider == true %}
                 $.supersized({
                     autoplay                :   1,
                     random                  :   1,
@@ -41,17 +37,29 @@
                     slide_links             :   'blank',
                     slides                  :   [
                     {% for img in page.homeslider_images %}
-                        {image : '{{ site.assets }}{{ img }}'}{% unless forloop.last %},{% endunless %}
+                        {image : '{{baseurl}}{{ site.assets }}{{ img }}'}{% unless forloop.last %},{% endunless %}
                     {% endfor %}
                     ]
                 });
+                {% else %}
 
+                  {% comment %}
+                    hide the loader
+                  {% endcomment %}
+
+                  $("#supersized-loader").remove();
+
+                {% endif %}
 
             });
         }); //end LazyLoad.js
     </script>
 
-  {% if page.url contains "contact" %}
+{% comment %}
+    Google maps
+{% endcomment %}
+
+  {% if page.url contains "/contact" %}
       <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
   {% endif %}
 
@@ -60,6 +68,3 @@
 {% endcomment %}
 
 {% include google_analytics.html %}
-
-</body>
-</html>

@@ -1,3 +1,9 @@
+{% if include.homepage != true %}
+  {% assign tag = "h2" %}
+{% else %}
+  {% assign tag = "h1" %}
+{% endif %}
+
   <div class="four columns logo alpha">
-    <h1 id="logo"><a href="/"><img src="{{ site.img }}/weditorial-logo.png" alt="Weditorials Photography" /></a></h1>
+    <{{tag}} id="logo"><a href="{{ baseurl }}/"><img src="{{ baseurl }}{{ site.img }}/weditorial-logo.png" alt="Weditorials Photography" /></a></{{tag}}>
   </div>

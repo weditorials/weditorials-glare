@@ -1,5 +1,8 @@
 ---
+title: Sample Page Title
 layout: gallery
+body_id: gallery
+homeslider: false
 backgroundBanner: /assets/img/sample-page-banner.jpg
 photos:
   - 1.jpg
@@ -21,10 +24,10 @@ photos:
 
     {% for photo in page.photos %}
       <article class="four columns set">
-          <img src="{{ site.assets }}/wedding/sample/{{ photo }}" alt="" class="scale-with-grid" />
-          <a href="{{ site.assets }}/wedding/sample/large_{{ photo }}">Image</a>
+          <img src="{{baseurl}}{{ site.assets }}/wedding/sample/{{ photo }}" alt="" class="scale-with-grid" />
+          <a href="{{baseurl}}{{ site.assets }}/wedding/sample/large_{{ photo }}">Image</a>
           <div class="zoom">
-              <a href="{{ site.assets }}/wedding/sample/large_{{ photo }}" class="view-set">View set</a>
+              <a href="{{baseurl}}{{ site.assets }}/wedding/sample/large_{{ photo }}" class="view-set">View set</a>
               <a href="#" class="view-article">View article</a>
           </div>
       </article><!-- /set -->

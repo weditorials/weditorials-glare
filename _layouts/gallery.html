@@ -2,12 +2,16 @@
 layout: default
 ---
 
-  <div id="main" class="sixteen columns normal group">
+    <div class="container">
 
-      <h2 class="page-title">{{ page.title }}</h2>
+      {% include header.html %}
 
-      <div class="row col-listing">
-        {{ content }}
-      </div><!-- /row -->
+        <div id="main" class="sixteen columns normal group">
+          <h1 class="page-title">{{ page.title }}</h1>
+          <div class="row col-listing">
+            {{ content }}
+          </div><!-- /row -->
 
-  </div><!-- /main -->
+      </div><!-- /main -->
+
+    </div><!-- /container -->

@@ -1,5 +1,17 @@
-<div class="sixteen columns">
-    <div class="transparent wedding-banner">
-        <img src="{{site.assets}}/wedding/zinnia-and-mustafa-2013-weditorial-wedding-black.jpg" alt="" />
-   </div>
-</div>
+{% comment %}
+Header area {% endcomment %}
+
+<header id="header" class="sixteen columns">
+
+    <div class="row transparent">
+
+        {% include logo.html %}
+
+        {% include navigation.html %}
+
+    </div><!-- /row -->
+</header><!-- /header -->
+
+{% comment %}
+Wedding Banner {% endcomment %}
+{% include banner.html %}

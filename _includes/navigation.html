@@ -2,19 +2,19 @@
   <nav id="navigation">
       <ul class="nav group">
           <li>
-              <a href="{{ site.url }}/getting-ready/" {% if page.url contains "getting-ready" %}class="active"{% endif %}>Getting Ready</a>
+              <a href="{{ baseurl }}/getting-ready/" {% if page.url == "/getting-ready" %}class="active"{% endif %}>Getting Ready</a>
           </li>
           <li>
-              <a href="{{ site.url }}/ceremony/" {% if page.url contains "ceremony" %}class="active"{% endif %}>Ceremony</a>
+              <a href="{{ baseurl }}/ceremony/" {% if page.url == "/ceremony" %}class="active"{% endif %}>Ceremony</a>
           </li>
           <li>
-              <a href="{{ site.url }}/photo-fun/" {% if page.url contains "photo-fun" %}class="active"{% endif %}>Photo Fun</a>
+              <a href="{{ baseurl }}/photo-fun/" {% if page.url == "/photo-fun" %}class="active"{% endif %}>Photo Fun</a>
           </li>
           <li>
-              <a href="{{ site.url }}/reception/" {% if page.url contains "reception" %}class="active"{% endif %}>Reception</a>
+              <a href="{{ baseurl }}/reception/" {% if page.url == "/reception" %}class="active"{% endif %}>Reception</a>
           </li>
           <li>
-              <a href="{{ site.url }}/contact/" {% if page.url contains "contact" %}class="active"{% endif %}>Contact</a>
+              <a href="{{ baseurl }}/contact/" {% if page.url == "/contact" %}class="active"{% endif %}>Contact</a>
           </li>
       </ul>
   </nav><!-- /navigation -->
