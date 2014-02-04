@@ -56,14 +56,15 @@ photos:
   - 49.jpg
   - 50.jpg
 ---
-<div class="clearfix mosaicflow">
+
+<div class="gallery">
+
     {% for photo in page.photos %}
 
-      <div class="mosaicflow__item">
-        <a href="{{baseurl}}{{ site.assets }}/wedding/sample/large_{{ photo }}"><img src="{{baseurl}}{{ site.assets }}/wedding/sample/{{ photo }}" alt="" class="scale-with-grid1 " /></a>
-      </div>
+      <article class="item">
+        <a href="{{baseurl}}{{ site.assets }}/wedding/sample/large_{{ photo }}" class="fancybox" rel="gallery"><img src="{{baseurl}}{{ site.assets }}/wedding/sample/{{ photo }}" alt="" height="235" class="" /></a>
+      </article>
       <!-- /set -->
-
 
     {% endfor %}
 </div>
