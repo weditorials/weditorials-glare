@@ -21,18 +21,35 @@ h1.page-title {
 .normal {
   margin-top: 94px;
 }
-// .gallery-title {
-//     @extend .wedding-banner;
-//     @include box-shadow(rgba(55,55,55, 0.2) 1px 1px 10px);
-//     height: auto;
-//     text-align: center;
-//     h1, h2 {
-//       font-size: 2em;
-//       margin: auto;
-//       padding: 0.2em 0;
-//       text-transform: uppercase;
+
+
+.mosaicflow__column {
+    float:left;
+}
+.mosaicflow__item {
+  a { display: block; }
+  img {
+    display:block;
+    height:auto;
+    width:100%;
+
+  }
+}
+
+// /* In your CSS */
+// .Collage{
+
+//     /* define how much padding you want in between your images */
+//     padding:10px;
+
 //     }
-// }
+
+// .Collage img{
+
+//     vertical-align:bottom;
+
+
+//     }
 
 /* #Media Queries
 ================================================== */
