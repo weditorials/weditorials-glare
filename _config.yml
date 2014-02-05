@@ -53,7 +53,8 @@ author:
 # Google Analytics             #
 #                              #
 ################################
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-46659980-2
+google_analytics_tracking_domain: weditorials.co.nz
 
 ################################
 #                              #

@@ -35,7 +35,7 @@
                     transition_speed        :   700,
                     slide_links             :   'blank',
                     slides                  :   [
-                    {% for img in page.homeslider_images %}
+                    {% for img in page.slides %}
                         {image : '{{baseurl}}{{ site.assets }}{{ img }}'}{% unless forloop.last %},{% endunless %}
                     {% endfor %}
                     ]

@@ -1,0 +1,17 @@
+<url>
+  <loc>{{ site.baseurl }}{{ include.entry.url }}</loc>
+  {% comment %}
+  How often the pages changes {% endcomment %}
+  {% if include.entry.sitemap.changefreq %}
+    <changefreq>{{include.entry.sitemap.changefreq}}</changefreq>
+  {% else %}
+    <changefreq>weekly</changefreq>
+  {% endif %}
+  {% comment %}
+  Check priority value {% endcomment %}
+  {% if include.entry.sitemap.priority %}
+    <priority>{{include.entry.sitemap.priority}}</priority>
+  {% else %}
+    <priority>0.5</priority>
+  {% endif %}
+</url>
