@@ -101,7 +101,7 @@ tr:nth-child(odd) td { background: #f0f0f0; }
 
 /* #Forms
 ================================================== */
-input[type=text], input[type=submit], textarea { border:solid 1px #ccc; padding:8px; font-family: inherit; font-size:14px; box-shadow:0 1px 1px rgba(0,0,0,0.05); }
+input[type=text], input[type=email], input[type=submit], textarea { border:solid 1px #ccc; padding:8px; font-family: inherit; font-size:14px; box-shadow:0 1px 1px rgba(0,0,0,0.05); }
 input[type=text]:focus, textarea:focus { border:solid 1px #444; }
 input[type=submit] { background:#dc5d2a; color:#fff; border:none; cursor: pointer; }
 
@@ -237,7 +237,7 @@ input[type=submit] { background:#dc5d2a; color:#fff; border:none; cursor: pointe
 /* Comment Form
 ================================================== */
 .post-form label { display:block; padding-bottom:5px; }
-.post-form input[type=text] { width:80%; }
+.post-form input[type=text], .post-form input[type=email] { width:80%; }
 .post-form textarea { width:90%; height:200px; }
 .post-form p { margin-bottom:15px; }
 #post-action { margin-bottom:0; }

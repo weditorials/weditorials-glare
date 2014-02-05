@@ -4,12 +4,12 @@
 #                              #
 ################################
 
-baseurl: http://glare.dev
+baseurl: http://zinnia-and-mustafa.weditorials.co.nz
 
-title: Zinnia &amp; Mustafa | Weditorials Wedding Photography
+title: Zinnia and Mustafa | Weditorials Wedding Photography
 subtitle: A Weditorials Photography Creation
 seo:
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  description:
   keywords: ["wedding photography", "engagement photography"]
 
 assets: /assets
@@ -17,9 +17,11 @@ css:    /assets/css
 js:     /assets/js
 img:    /assets/img
 
-markdown: rdiscount
-
-permalink: pretty
+################################
+#                              #
+# Default Settings             #
+#                              #
+################################
 
 # where to read the files from
 source:      ./
@@ -32,12 +34,18 @@ timezone:     Pacific/Auckland
 
 future:      true
 show_drafts: false
+# removes the .html from rendered pages
+# eg. /contact.html becomes /contact/
+permalink: pretty
+# requires rdiscount gem
+markdown: rdiscount
 
 ################################
 #                              #
 # Author Configuration         #
 #                              #
 ################################
+
 author:
   name:    Sergei Filippov
   email:   s@haiku.co.nz
@@ -53,6 +61,7 @@ author:
 # Google Analytics             #
 #                              #
 ################################
+
 google_analytics_tracking_id: UA-46659980-2
 google_analytics_tracking_domain: weditorials.co.nz
 
@@ -61,7 +70,6 @@ google_analytics_tracking_domain: weditorials.co.nz
 # Social                       #
 #                              #
 ################################
-facebook:
-twitter:
-pinterest:
-disqus_short_name:
+facebook: "https://www.facebook.com/weditorialsnz/"
+pinterest: "http://www.pinterest.com/weditorials/"
+instagram: "http://instagram.com/alyssajouk/"

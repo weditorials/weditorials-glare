@@ -7,10 +7,10 @@
 
 /* Wedding Banner */
 .wedding-banner {
-    height: 78px;
+    height: 111px;
     margin: 30px auto 0;
     padding: 15px 30px;
-    width: 500px;
+    width: 598px;
 }
 
 h1.page-title {
@@ -19,8 +19,17 @@ h1.page-title {
   line-height: 34px;
 }
 .nav a { text-transform: uppercase; }
-.normal {
-  margin-top: 54px;
+.inner .normal {
+  margin-top: 61px;
+}
+
+#gallery {
+  #header {
+    margin-top: -10px;
+  }
+  .normal {
+    margin-top: 61px;
+  }
 }
 .gallery {
   text-align: center;
@@ -57,6 +66,9 @@ h1.page-title {
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     #controls-wrapper { display: none !important; }
     #navigation { margin-bottom: 15px; }
+
+    // #header { margin-top: -10px; }
+
     .wedding-banner {
         height: auto;
         margin-top: 10px;
@@ -64,11 +76,22 @@ h1.page-title {
         width: auto;
         img { width: 100%; }
     }
-    .inner .normal {
-      top: 46px;
-    }
     .col-listing {
       padding-bottom: 15px;
+    }
+    .inner .normal {
+      margin-top: 86px;
+      top: 0;
+    }
+
+    // pages - gallery
+    #gallery {
+      #header {
+        margin-top: -10px;
+      }
+      .normal {
+        margin-top: 86px;
+      }
     }
 }
 
@@ -76,6 +99,7 @@ h1.page-title {
 @media only screen and (max-width: 479px) {
     #controls-wrapper { display: none !important; }
     #navigation { margin-bottom: 15px; }
+
     .wedding-banner {
         height: auto;
         margin-top: 10px;
@@ -84,12 +108,20 @@ h1.page-title {
         img { width: 100%; }
     }
     .inner .normal {
-      top: 25px;
-    }
-    .gallery {
-      margin-top: 15px;
+      margin-top: 105px;
+      top: 0;
     }
     .col-listing {
       padding-bottom: 15px;
+    }
+
+    // pages - gallery
+    #gallery {
+      #header {
+        margin-top: -10px;
+      }
+      .normal {
+        margin-top: 105px;
+      }
     }
 }

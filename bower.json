@@ -1,0 +1,12 @@
+{
+  "name": "glare",
+  "version": "0.0.1",
+  "main": "assets/style.css",
+  "dependencies": {
+    "jquery": "latest",
+    "jquery-easing": "latest",
+    "flexslider": "latest",
+    "supersized": "latest",
+    "modernizr": "latest"
+  }
+}
