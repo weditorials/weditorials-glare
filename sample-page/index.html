@@ -5,6 +5,7 @@ description:
 body_id: gallery
 homeslider: false
 backgroundBanner: /assets/wedding/page_headers/page_header_sample.jpg
+folder_name: sample
 photos:
   - 1.jpg
   - 2.jpg
@@ -37,10 +38,7 @@ photos:
 
     {% for photo in page.photos %}
 
-      <article class="item">
-        <a href="{{baseurl}}{{ site.assets }}/wedding/sample/large_{{ photo }}" class="fancybox" rel="gallery"><img src="{{baseurl}}{{ site.assets }}/wedding/sample/{{ photo }}" alt="" height="235" class="" /></a>
-      </article>
-      <!-- /set -->
+      {% include gallery-entry.html photo=photo folder=page.folder_name %}
 
     {% endfor %}
 
