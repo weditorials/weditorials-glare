@@ -44,6 +44,18 @@ h1.page-title {
   }
 }
 
+/* contact - about us
+------------------------------------------------- */
+.widget_about {
+  .photo {
+    height: 125px;
+    width: 125px;
+  }
+  img { width:100%; }
+}
+/* / contact - about us
+------------------------------------------------- */
+
 /* #Media Queries
 ================================================== */
 
@@ -93,6 +105,16 @@ h1.page-title {
         margin-top: 86px;
       }
     }
+    /* contact - about us
+    ------------------------------------------------- */
+    .widget_about {
+      .photo {
+        float: left;
+        margin: 0 15px 30px 0;
+      }
+    }
+    /* / contact - about us
+    ------------------------------------------------- */
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -124,4 +146,16 @@ h1.page-title {
         margin-top: 105px;
       }
     }
+    /* contact - about us
+    ------------------------------------------------- */
+    .widget_about {
+      .photo {
+        height: auto;
+        width: 100%;
+      }
+      img { width:100%; }
+    }
+    /* / contact - about us
+    ------------------------------------------------- */
+
 }
