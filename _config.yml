@@ -70,6 +70,22 @@ google_analytics_tracking_domain: weditorials.co.nz
 # Social                       #
 #                              #
 ################################
+
 facebook: "https://www.facebook.com/weditorialsnz/"
-pinterest: "http://www.pinterest.com/weditorials/"
 instagram: "http://instagram.com/alyssajouk/"
+pinterest: "http://www.pinterest.com/weditorials/"
+
+################################
+#                              #
+# Facebool: Open Graph         #
+#                              #
+################################
+
+## found in _includes/facebook_og.html
+# og_url: {{site.baseurl}}
+# og_image: {{site.img}}/weditorials_facebook.jpg
+
+og_description: Zinia and Mustafa Wedding Photos by Weditorial.co.nz
+og_type:        website
+og_title:       Zinia and Mustafa Wedding Photos by Weditorial.co.nz
+og_site_name:   Zinia and Mustafa Wedding Photos by Weditorial.co.nz
