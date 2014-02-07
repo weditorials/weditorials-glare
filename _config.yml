@@ -16,6 +16,7 @@ assets: /assets
 css:    /assets/css
 js:     /assets/js
 img:    /assets/img
+audio:  /assets/audio
 
 ################################
 #                              #
@@ -89,3 +90,13 @@ og_description: Zinia and Mustafa Wedding Photos by Weditorial.co.nz
 og_type:        website
 og_title:       Zinia and Mustafa Wedding Photos by Weditorial.co.nz
 og_site_name:   Zinia and Mustafa Wedding Photos by Weditorial.co.nz
+
+################################
+#                              #
+# Audio                        #
+#                              #
+################################
+
+song:
+  autoplay: true
+  filename: michael_bubble_sway.mp3

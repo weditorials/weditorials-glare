@@ -64,9 +64,9 @@
         image_path          :   'img/',             // Default image path
 
         // General Elements
-        play_button         :   '#pauseplay',       // Play/Pause button
-        next_slide          :   '#nextslide',       // Next slide button
-        prev_slide          :   '#prevslide',       // Prev slide button
+        // play_button         :   '#pauseplay',       // Play/Pause button
+        //next_slide          :   '#nextslide',       // Next slide button
+        //prev_slide          :   '#prevslide',       // Prev slide button
         next_thumb          :   '#nextthumb',       // Next slide thumb button
         prev_thumb          :   '#prevthumb',       // Prev slide thumb button
 

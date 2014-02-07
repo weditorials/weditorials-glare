@@ -1,3 +1,5 @@
+---
+---
 jQuery.fn.center = function(pos) {
     var parent = window;
     this.css({
@@ -9,15 +11,6 @@ jQuery.fn.center = function(pos) {
 };
 
 jQuery(function($){
-    //Submenu
-    // $('.nav').superfish({
-    //     animation: {
-    //         opacity: 'show',
-    //         height: 'show'
-    //     },
-    //     speed: 'fast',
-    //     delay: 500
-    // });
 
     //Hide Slider
     $('#hide-slider').click(function(){
@@ -162,4 +155,31 @@ function initialize() {
         google.maps.event.addListener(marker, 'click', function() {
           infowindow.open(map,marker);
         });
+}
+
+/* audo player */
+// audio support test
+// var has_audio = document.createElement("audio");
+
+function setAudio (src){
+  // JavaScript object for later use
+  $("#home").append("<audio id='song' src='"+ src +"' type='audio/mp3' />" );
+  var player = $('#song').mediaelementplayer({
+    startVolume: 0.5,
+    audioWidth: 0,
+    audioHeight: 0,
+    alwaysShowHours: false,
+    showTimecodeFrameCount: false,
+    alwaysShowControls: false
+  });
+  $(".mejs-audio").hide();
+  return player;
+}
+
+function pauseAudio (player){
+  player.trigger('pause');
+}
+
+function playAudio (player){
+  player.trigger('play');
 }

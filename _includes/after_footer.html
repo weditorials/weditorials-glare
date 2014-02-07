@@ -13,6 +13,7 @@
         LazyLoad.js([
             '{{baseurl}}{{ site.js }}/libs/modernizr.js',
             '{{baseurl}}{{ site.js }}/libs/jquery.1.10.2.min.js',
+            '{{baseurl}}{{ site.js }}/libs/mediaelement.min.js',
             '{{baseurl}}{{ site.js }}/libs/jquery.easing.min.js',
             '{{baseurl}}{{ site.js }}/libs/supersized.3.2.7.min.js',
             '{{baseurl}}{{ site.js }}/libs/supersized.shutter.js',
@@ -23,9 +24,7 @@
           console.log('all files have been loaded');
           $().ready(function($) {
 
-            {% comment %}
-            Homepage actions {% endcomment %}
-
+            // fullpage slider = true ------------/
               {% if page.homeslider == true %}
                 $.supersized({
                     autoplay                :   1,
@@ -40,19 +39,42 @@
                     {% endfor %}
                     ]
                 });
+              {% else %}
+                // no fullpage slider -----------------/
+                $("#supersized-loader").remove();
+              {% endif %}
 
-                {% else %}
+              {% if site.song.autoplay %}
+                window.player = setAudio("{{ site.audio }}/{{site.song.filename}}");
+                window.autoPlay = {{ site.song.autoplay }};
+                window.audioPlaying = true;
 
-                  {% comment %}
-                    hide the loader {% endcomment %}
-                  $("#supersized-loader").remove();
+                if (window.autoPlay){
+                  // autoplay
+                  player.trigger("play");
+                  // play/pause button actions
+                  $("#pauseplay").on("click", function(){
+                    // styling toggle
+                    $(this).toggleClass("sz-play");
+                    // check if audio is playing
+                    if (window.audioPlaying){
+                     pauseAudio(window.player);
+                      window.audioPlaying = false;
+                    } else {
+                      playAudio(window.player);
+                      window.audioPlaying = true;
+                    }
+                  });
+                }
+              {% endif %}
 
-                {% endif %}
-
-                {% comment %}
-                  fancybox are go {% endcomment %}
-
+              {% if page.url == "/" %}
+                //audio on
+                // $.ionSound.play("rose");
+              {% else %}
                 $(".fancybox").fancybox();
+                // audio off
+              {% endif %}
 
             });
         }); //end LazyLoad.js

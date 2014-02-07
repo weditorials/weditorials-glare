@@ -1,0 +1,30 @@
+{
+  "name": "glare",
+  "version": "0.0.1",
+  "description": "jekyll theme",
+  "dependencies": {
+    "gulp": "~3.5.2",
+    "gulp-clean": "~0.2.4",
+    "gulp-concat": "~2.1.7",
+    "gulp-exec": "~1.0.4",
+    "gulp-git": "~0.3.0",
+    "gulp-header": "~1.0.2",
+    "gulp-jekyll": "~0.0.0",
+    "gulp-jshint": "~1.4.0",
+    "gulp-load-tasks": "~0.1.1",
+    "gulp-livereload": "~1.0.1",
+    "gulp-notify": "~0.4.0",
+    "gulp-plumber": "~0.5.6",
+    "gulp-rename": "~0.2.2",
+    "gulp-sass": "~0.6.0",
+    "gulp-ssh": "~0.0.2",
+    "gulp-task-listing": "~0.2.1",
+    "gulp-uglify": "~0.2.0",
+    "gulp-util": "~2.2.14"
+  },
+  "devDependencies": {
+    "gulp-notify": "~0.4.0"
+  },
+  "author": "Sergei Filippov",
+  "license": "MIT"
+}
