@@ -42,6 +42,17 @@ h1.page-title {
   }
 }
 
+/* footer logo */
+footer .logo {
+  margin: 10px auto;
+  text-align: center;
+  width: 200px;
+}
+#home footer .logo {
+  left: -1000em;
+  position: absolute;
+}
+
 /* contact - about us
 ------------------------------------------------- */
 .widget_about {
@@ -53,6 +64,7 @@ h1.page-title {
 }
 /* / contact - about us
 ------------------------------------------------- */
+
 
 /* #Media Queries
 ================================================== */
