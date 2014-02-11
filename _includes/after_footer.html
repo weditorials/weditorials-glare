@@ -11,15 +11,15 @@
     ================================================== -->
     <script>
         LazyLoad.js([
-            '{{baseurl}}{{ site.js }}/libs/modernizr.js',
-            '{{baseurl}}{{ site.js }}/libs/jquery.1.10.2.min.js',
-            '{{baseurl}}{{ site.js }}/libs/mediaelement.min.js',
-            '{{baseurl}}{{ site.js }}/libs/jquery.easing.min.js',
-            '{{baseurl}}{{ site.js }}/libs/supersized.3.2.7.min.js',
-            '{{baseurl}}{{ site.js }}/libs/supersized.shutter.js',
-            '{{baseurl}}{{ site.js }}/libs/jquery.mousewheel.min.js',
-            '{{baseurl}}{{ site.js }}/libs/jquery.fancybox.2.1.5.min.js',
-            '{{baseurl}}{{ site.js }}/libs/scripts.js'
+//            '{{baseurl}}{{ site.js }}/libs/modernizr.js',
+//            '{{baseurl}}{{ site.js }}/libs/jquery.1.10.2.min.js',
+//            '{{baseurl}}{{ site.js }}/libs/mediaelement.min.js',
+//            '{{baseurl}}{{ site.js }}/libs/jquery.easing.min.js',
+//            '{{baseurl}}{{ site.js }}/libs/supersized.3.2.7.min.js',
+//            '{{baseurl}}{{ site.js }}/libs/supersized.shutter.js',
+//            '{{baseurl}}{{ site.js }}/libs/jquery.mousewheel.min.js',
+//            '{{baseurl}}{{ site.js }}/libs/jquery.fancybox.2.1.5.min.js',
+            '{{baseurl}}{{ site.js }}/min/scripts.min.js'
         ], function () {
           console.log('all files have been loaded');
           $().ready(function($) {
@@ -40,7 +40,7 @@
                     ]
                 });
               {% else %}
-                // no fullpage slider -----------------/
+                // no full page slider -----------------/
                 $("#supersized-loader").remove();
               {% endif %}
 

@@ -1,4 +1,11 @@
 # node modules
 node_modules/
 
+# temp folder used for concatenation and minification
+.temp/
+
+# sass-cache
+.sass-cache/
+
+# jekyll
 _site

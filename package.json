@@ -1,30 +1,36 @@
 {
-  "name": "glare",
-  "version": "0.0.1",
-  "description": "jekyll theme",
-  "dependencies": {
-    "gulp": "~3.5.2",
-    "gulp-clean": "~0.2.4",
-    "gulp-concat": "~2.1.7",
-    "gulp-exec": "~1.0.4",
-    "gulp-git": "~0.3.0",
-    "gulp-header": "~1.0.2",
-    "gulp-jekyll": "~0.0.0",
-    "gulp-jshint": "~1.4.0",
-    "gulp-load-tasks": "~0.1.1",
-    "gulp-livereload": "~1.0.1",
-    "gulp-notify": "~0.4.0",
-    "gulp-plumber": "~0.5.6",
-    "gulp-rename": "~0.2.2",
-    "gulp-sass": "~0.6.0",
-    "gulp-ssh": "~0.0.2",
-    "gulp-task-listing": "~0.2.1",
-    "gulp-uglify": "~0.2.0",
-    "gulp-util": "~2.2.14"
-  },
-  "devDependencies": {
-    "gulp-notify": "~0.4.0"
-  },
-  "author": "Sergei Filippov",
-  "license": "MIT"
+    "name": "glare",
+    "version": "0.0.1",
+    "author": "Sergei Filippov",
+    "company": "Haiku Lab Limted",
+    "url": "http://haiku.co.nz",
+    "homepage": "http://zinnia-and-mustafa.weditorials.co.nz",
+    "license": "Limited",
+    "description": "jekyll theme",
+    "css": "style.css",
+    "js": "scripts.js",
+    "devDependencies": {
+        "grunt": "~0.4.2",
+        "grunt-init": "~0.3.1",
+        "grunt-contrib-clean": "~0.5.0",
+        "grunt-contrib-jshint": "~0.8.0",
+        "grunt-jekyll": "~0.4.1",
+        "grunt-contrib-watch": "~0.5.3",
+        "grunt-contrib-uglify": "~0.3.2",
+        "grunt-contrib-concat": "~0.3.0",
+        "grunt-contrib-compass": "~0.7.2",
+        "grunt-contrib-csslint": "~0.2.0",
+        "grunt-devtools": "~0.2.1",
+        "grunt-notify": "~0.2.17"
+    },
+    "f": {
+        "root":  "./",
+        "jsDir": "assets/js",
+        "jsLib": "assets/js/libs",
+        "jsMin": "assets/js/min",
+        "cssDir": "assets/css",
+        "sassDir": "assets/sass",
+        "fontsDir": "assets/fonts",
+        "imgDir": "assets/img"
+    }
 }

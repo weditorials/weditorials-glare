@@ -4,7 +4,9 @@
 #                              #
 ################################
 
-baseurl: http://zinnia-and-mustafa.weditorials.co.nz
+#baseurl: http://zinnia-and-mustafa.weditorials.co.nz
+baseurl: http://glare.dev
+
 
 title: Zinnia and Mustafa | Weditorials Wedding Photography
 subtitle: A Weditorials Photography Creation
@@ -40,6 +42,8 @@ show_drafts: false
 permalink: pretty
 # requires rdiscount gem
 markdown: rdiscount
+
+exclude: [CNAME,Gemfile,Gemfile.lock,Procfile,README.md,bower.json,config.rb,glare,gulpfile.js,jekyll,node_modules,package.json,refresh.sh,sample-page]
 
 ################################
 #                              #
