@@ -124,6 +124,12 @@ module.exports = function (grunt) {
                     remote: 'github',
                     branch: '<%= pkg.branch %>'
                 }
+            },
+            bitbucket: { // git push to remote
+                options: {
+                    remote: 'bitbucket',
+                    branch: '<%= pkg.branch %>'
+                }
             }
         }, // [end] git
 
@@ -191,6 +197,7 @@ module.exports = function (grunt) {
     //noinspection JSHint
     grunt.registerTask('deploy', [
         'bump', // bump version
-        'gitpush:github' // cleanup .sass-cache
+        'gitpush:github', // push to github
+        'gitpush:bitbucket' // backup to bitbucket
     ]);
 };
