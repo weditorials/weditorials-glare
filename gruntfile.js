@@ -190,7 +190,7 @@ module.exports = function (grunt) {
     // ###########################################
     //noinspection JSHint
     grunt.registerTask('deploy', [
-        'default',
+        'bump', // bump version
         'gitpush:github' // cleanup .sass-cache
     ]);
 };
