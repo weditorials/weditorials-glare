@@ -31,7 +31,9 @@ module.exports = function (grunt) {
                 '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
                 ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
         },
-
+        // ***************************************
+        // Clean a folder - grunt-contrib-clean
+        // ***************************************
         clean: {
             js: {
                 src: ['<%= pkg.f.jsMin %>']
@@ -107,7 +109,9 @@ module.exports = function (grunt) {
         // ***************************************
         compass: { //task
             clean: { // task: clean compass cache
-                options: { clean: true }
+                options: {
+                    clean: true
+                }
             },
             options: { // read configuration from config.rb
                 config: './config.rb'
