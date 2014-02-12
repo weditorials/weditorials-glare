@@ -13,6 +13,7 @@
         "jquery-easing": "latest",
         "flexslider": "latest",
         "supersized": "latest",
-        "modernizr": "latest"
+        "modernizr": "latest",
+        "jquery.lazyload": "latest"
     }
 }

@@ -1,4 +1,4 @@
     <article class="item">
-      <a href="{{baseurl}}{{ site.assets }}/wedding/{{include.folder}}/large_{{ include.photo }}" class="fancybox" rel="gallery"><img src="{{baseurl}}{{ site.assets }}/wedding/{{include.folder}}/{{ include.photo }}" alt="" height="235" class="" /></a>
+      <a href="{{baseurl}}{{ site.assets }}/wedding/{{include.folder}}/large_{{ include.photo }}" class="fancybox" rel="gallery"><img data-original="{{baseurl}}{{ site.assets }}/wedding/{{include.folder}}/{{ include.photo }}" alt="{% if include.title %}{{include.title}}{%else%}Images by Weditorials.co.nz{%endif%}" width="" height="235" class="lazy"  /></a>
     </article>
     <!-- /set -->

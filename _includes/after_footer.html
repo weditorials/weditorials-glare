@@ -19,7 +19,8 @@
 //            '{{baseurl}}{{ site.js }}/libs/supersized.shutter.js',
 //            '{{baseurl}}{{ site.js }}/libs/jquery.mousewheel.min.js',
 //            '{{baseurl}}{{ site.js }}/libs/jquery.fancybox.2.1.5.min.js',
-            '{{baseurl}}{{ site.js }}/min/scripts.min.js'
+            '{{baseurl}}{{ site.js }}/min/scripts.min.js',
+            '{{baseurl}}{{ site.js }}/libs/jquery.lazyload.min.js'
         ], function () {
           console.log('all files have been loaded');
           $().ready(function($) {
@@ -72,7 +73,12 @@
                 //audio on
                 // $.ionSound.play("rose");
               {% else %}
-                $(".fancybox").fancybox();
+                  // fancy box popup for large images
+                  $(".fancybox").fancybox();
+                  // lazy load
+                  $("img.lazy").lazyload({
+                      threshold : 200
+                  });
                 // audio off
               {% endif %}
 

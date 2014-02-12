@@ -38,7 +38,7 @@ photos:
 
     {% for photo in page.photos %}
 
-      {% include gallery-entry.html photo=photo folder=page.folder_name %}
+      {% include gallery-entry.html photo=photo folder=page.folder_name title=site.title %}
 
     {% endfor %}
 
