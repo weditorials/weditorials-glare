@@ -8,6 +8,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat'); //task:concat - join files
     grunt.loadNpmTasks('grunt-contrib-compass'); //task:compass - compass compiling
     grunt.loadNpmTasks('grunt-contrib-uglify'); //task:uglify - js processing
+    grunt.loadNpmTasks('grunt-git'); //git controls! Awesome
+    grunt.loadNpmTasks('grunt-bump'); //version bump
 
     // handy tool modules
     grunt.loadNpmTasks('grunt-devtools');
@@ -113,6 +115,37 @@ module.exports = function (grunt) {
             files: ['<%= pkg.f.sassDir %>']
         }, // [end] compass
 
+        // ***************************************
+        // Git - grunt-git
+        // ***************************************
+        gitpush: { //task
+            github: { // git push to remote
+                options: {
+                    remote: 'github',
+                    branch: '<%= pkg.branch %>'
+                }
+            }
+        }, // [end] git
+
+        // ***************************************
+        // Bump version - grunt-bump
+        // ***************************************
+        bump: {
+            options: {
+                files: ['package.json'],
+                updateConfigs: ['pkg'],
+                commit: true,
+                commitMessage: 'Release v%VERSION%',
+                commitFiles: ['package.json'], // '-a' for all files
+                createTag: true,
+                tagName: 'v%VERSION%',
+                tagMessage: 'Version %VERSION%',
+                push: false,
+                pushTo: '<%= pkg.branch %>',
+                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d' // options to use with '$ git describe'
+            }
+        },
+
         // *******************************************
         // WATCH it all happen = grunt-contrib-watch
         // *******************************************
@@ -152,12 +185,12 @@ module.exports = function (grunt) {
         'watch'
     ]);
 
-    grunt.registerTask('dev', [
-        'compass:clean', // cleanup .sass-cache
-        'compass',       // compile compass
-        'clean:js',      // clean out js min folder
-        'concat',        // join js files
-        'uglify',        // compress js files
-        'jekyll'         // jekyll site generation
+    // ###########################################
+    // deploy to Github Pages
+    // ###########################################
+    //noinspection JSHint
+    grunt.registerTask('deploy', [
+        'default',
+        'gitpush:github' // cleanup .sass-cache
     ]);
 };
