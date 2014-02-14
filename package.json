@@ -1,5 +1,5 @@
 {
-  "name": "Weditorials Theme - Glare",
+  "name": "weditorials_theme",
   "version": "0.1.7",
   "author": "Sergei Filippov",
   "company": "Haiku Lab Limted",
@@ -10,6 +10,7 @@
   "css": "style.css",
   "js": "scripts.js",
   "branch": "gh-pages",
+  "dependencies":"",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-init": "~0.3.1",
